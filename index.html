@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wellerson Pessotto — Arquitetura e Interiores</title>
+<meta name="description" content="Projetos de arquitetura residencial, interiores e corporativos assinados por Wellerson Pessotto. Do estudo preliminar ao detalhamento executivo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..600&family=Spectral:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/marca.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="pular" href="#projetos">Ir para os projetos</a>
+
+<header class="topo" id="topo">
+  <a class="marca" href="#topo" aria-label="Wellerson Pessotto — Arquitetura, Interiores e Urbanismo">
+    <img class="marca__icone" src="assets/marca-clara.png" alt="" aria-hidden="true">
+    <span class="marca__nome">Wellerson Pessotto</span>
+  </a>
+
+  <nav class="menu" aria-label="Principal">
+    <a href="#estudio">Estúdio</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#processo">Processo</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <a class="wpp" href="https://wa.me/5555996615052" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="menu-mobile" id="menu-mobile" hidden>
+  <nav aria-label="Menu mobile">
+    <a href="#estudio">Estúdio</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#processo">Processo</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="menu-mobile__wpp" href="https://wa.me/5555996615052" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <picture class="hero__img">
+    <source media="(max-width: 760px)" srcset="assets/hero/banner-mobile.jpg">
+    <img src="assets/hero/banner.jpg" alt="Residência contemporânea de dois pavimentos ao anoitecer, com iluminação embutida na fachada e paisagismo iluminado" fetchpriority="high">
+  </picture>
+
+  <div class="hero__conteudo">
+    <p class="cota cota--claro">Arquitetura · Interiores · Urbanismo</p>
+    <h1 class="hero__nome">Wellerson<br><em>Pessotto</em></h1>
+    <p class="hero__linha">Projetos desenhados para a maneira como você realmente vive — da implantação no terreno ao último detalhe de marcenaria.</p>
+    <div class="hero__acoes">
+      <a class="btn btn--brasa" href="#projetos">Ver projetos</a>
+      <a class="btn btn--vazio" href="https://wa.me/5555996615052" target="_blank" rel="noopener">Iniciar um projeto</a>
+    </div>
+  </div>
+
+  <div class="hero__rodape">
+    <span>Residencial · Interiores · Corporativo</span>
+    <span class="hero__rolar" aria-hidden="true">Role<i></i></span>
+  </div>
+</section>
+
+<!-- ══ MANIFESTO ══ -->
+<section class="manifesto" id="estudio">
+  <div class="wrap">
+    <p class="cota">O estúdio</p>
+    <h2 class="titulo-grande revelar">
+      Cada casa começa com uma pergunta:<br>
+      <em>como essa família quer viver?</em>
+    </h2>
+    <div class="manifesto__texto revelar">
+      <p>Antes da primeira linha, existe a escuta. Rotina, luz, ruído, o jeito de receber, o terreno e o que ele permite. É desse levantamento que nasce a planta — e não do contrário.</p>
+      <p>O resultado é um projeto que parece óbvio depois de pronto: ambientes integrados sem perder privacidade, luz natural onde ela faz diferença, iluminação artificial pensada por cena e materiais escolhidos para durar sem manutenção pesada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJETOS ══ -->
+<section class="projetos" id="projetos">
+  <div class="wrap">
+    <p class="cota">Projetos selecionados</p>
+    <h2 class="titulo-secao">Do terreno ao detalhe</h2>
+
+    <div class="filtros" role="tablist" aria-label="Filtrar projetos por categoria">
+      <button class="filtro is-ativo" data-filtro="todos" role="tab" aria-selected="true">Todos</button>
+      <button class="filtro" data-filtro="residencial" role="tab" aria-selected="false">Residencial</button>
+      <button class="filtro" data-filtro="interiores" role="tab" aria-selected="false">Interiores</button>
+      <button class="filtro" data-filtro="corporativo" role="tab" aria-selected="false">Corporativo</button>
+    </div>
+  </div>
+
+  <div class="grade" id="grade">
+    <figure class="obra obra--larga" data-cat="residencial">
+      <img src="assets/projetos/residencial-fachada-noturna.jpg" alt="Fachada iluminada de residência de dois pavimentos ao entardecer" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Residencial</span>
+        <span class="obra__nome">Casa Anoitecer</span>
+        <span class="obra__nota">Fachada e paisagismo cênico</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="residencial">
+      <img src="assets/projetos/residencial-fachada-diurna.jpg" alt="Fachada branca com volumes retos, madeira ripada e portão vazado" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Residencial</span>
+        <span class="obra__nome">Casa Ripado</span>
+        <span class="obra__nota">Volumes brancos e madeira</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="residencial">
+      <img src="assets/projetos/residencial-piscina.jpg" alt="Área externa com piscina, cascata e varanda sombreada" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Residencial</span>
+        <span class="obra__nome">Pátio Água</span>
+        <span class="obra__nota">Piscina e varanda integradas</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra obra--larga" data-cat="residencial">
+      <img src="assets/projetos/residencial-area-lazer.jpg" alt="Área de lazer com piscina, espreguiçadeiras e muro com cascatas" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Residencial</span>
+        <span class="obra__nome">Lazer Recolhido</span>
+        <span class="obra__nota">Área de lazer protegida do vizinho</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="interiores">
+      <img src="assets/projetos/interiores-living.jpg" alt="Living com pé-direito duplo, sofá claro, adega e escada em concreto" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Interiores</span>
+        <span class="obra__nome">Living Duplo</span>
+        <span class="obra__nota">Pé-direito duplo e adega</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="interiores">
+      <img src="assets/projetos/interiores-cozinha.jpg" alt="Cozinha integrada à sala de jantar com cristaleira e pendente escultural" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Interiores</span>
+        <span class="obra__nome">Cozinha Aberta</span>
+        <span class="obra__nota">Jantar, ilha e cristaleira</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="interiores">
+      <img src="assets/projetos/interiores-suite-02.jpg" alt="Suíte com cabeceira curva iluminada, cortina até o teto e pendente circular" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Interiores</span>
+        <span class="obra__nome">Suíte Curva</span>
+        <span class="obra__nota">Cabeceira em curva com luz indireta</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="interiores">
+      <img src="assets/projetos/interiores-suite-01.jpg" alt="Vista frontal da suíte com cabeceira curva, arandelas douradas e criados suspensos" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Interiores</span>
+        <span class="obra__nome">Suíte Curva</span>
+        <span class="obra__nota">Marcenaria suspensa e arandelas</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="interiores">
+      <img src="assets/projetos/interiores-adega.jpg" alt="Adega sob escada com parede de pedra, garrafeira vertical e frigobar" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Interiores</span>
+        <span class="obra__nome">Adega sob a Escada</span>
+        <span class="obra__nota">Aproveitamento do vão</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra" data-cat="interiores">
+      <img src="assets/projetos/interiores-home-theater.jpg" alt="Painel ripado de piso a teto com rack suspenso e mesa de centro em madeira" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Interiores</span>
+        <span class="obra__nome">Painel de Piso a Teto</span>
+        <span class="obra__nota">Home theater minimalista</span>
+      </figcaption>
+    </figure>
+
+    <figure class="obra obra--total" data-cat="corporativo">
+      <img src="assets/projetos/corporativo-fruteira-sacolao.jpg" alt="Fachada comercial revestida em painéis 3D laranja com letreiro luminoso" loading="lazy">
+      <figcaption>
+        <span class="obra__cat">Corporativo</span>
+        <span class="obra__nome">Fruteira Sacolão</span>
+        <span class="obra__nota">Fachada comercial e identidade</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══ PROCESSO ══ -->
+<section class="processo" id="processo">
+  <div class="wrap">
+    <p class="cota cota--claro">Como trabalhamos</p>
+    <h2 class="titulo-secao titulo-secao--claro">Quatro etapas, nessa ordem</h2>
+
+    <ol class="etapas">
+      <li class="etapa revelar">
+        <span class="etapa__num">01</span>
+        <h3>Levantamento</h3>
+        <p>Visita ao terreno ou imóvel, medição, análise de insolação e conversa sobre rotina, orçamento e prazo. Sai daqui o programa de necessidades.</p>
+      </li>
+      <li class="etapa revelar">
+        <span class="etapa__num">02</span>
+        <h3>Estudo preliminar</h3>
+        <p>Primeiras plantas e volumetria em 3D. É a fase de discutir e mudar: ajustamos até a distribuição fazer sentido para quem vai morar.</p>
+      </li>
+      <li class="etapa revelar">
+        <span class="etapa__num">03</span>
+        <h3>Projeto executivo</h3>
+        <p>Detalhamento técnico, especificação de materiais, elétrica, iluminação e marcenaria. O que a obra precisa para executar sem improviso.</p>
+      </li>
+      <li class="etapa revelar">
+        <span class="etapa__num">04</span>
+        <h3>Acompanhamento</h3>
+        <p>Visitas periódicas à obra, suporte a fornecedores e conferência do que foi projetado. O projeto termina quando a casa fica pronta.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ SOBRE ══ -->
+<section class="sobre">
+  <div class="wrap sobre__grid">
+    <div class="sobre__img revelar">
+      <img src="assets/wellerson.jpg" alt="Retrato de Wellerson Pessotto, arquiteto e urbanista" loading="lazy">
+    </div>
+    <div class="sobre__texto">
+      <p class="cota">O arquiteto</p>
+      <h2 class="titulo-secao">Wellerson Pessotto</h2>
+      <p>Arquiteto e urbanista, atua em projetos residenciais de alto padrão, interiores e arquitetura comercial. Conduz pessoalmente cada projeto — do primeiro croqui à última visita de obra.</p>
+      <p>O trabalho parte de uma convicção simples: arquitetura boa é aquela que resolve. Circulação que funciona, luz na medida certa, marcenaria que cabe na rotina e materiais que envelhecem bem. O resto é consequência.</p>
+      <ul class="sobre__lista">
+        <li>Projeto arquitetônico completo</li>
+        <li>Interiores e detalhamento de marcenaria</li>
+        <li>Projeto luminotécnico</li>
+        <li>Arquitetura comercial e fachadas</li>
+        <li>Urbanismo e estudo de implantação</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVIÇOS ══ -->
+<section class="servicos" id="servicos">
+  <div class="wrap">
+    <p class="cota">Serviços</p>
+    <h2 class="titulo-secao">Escolha o ponto de partida</h2>
+
+    <div class="cards">
+      <article class="card revelar">
+        <h3>Projeto arquitetônico</h3>
+        <p>Para quem vai construir. Implantação, plantas, cortes, fachadas, volumetria 3D e o executivo completo para a obra sair do papel.</p>
+        <ul>
+          <li>Estudo de terreno e legislação</li>
+          <li>Volumetria e fachadas</li>
+          <li>Projeto executivo</li>
+        </ul>
+        <a class="card__cta" href="https://wa.me/5555996615052?text=Quero%20falar%20sobre%20projeto%20arquitet%C3%B4nico" target="_blank" rel="noopener">Falar sobre construir</a>
+      </article>
+
+      <article class="card revelar">
+        <h3>Interiores</h3>
+        <p>Para quem já tem o imóvel. Layout, marcenaria detalhada, iluminação, revestimentos e um caderno de especificação pronto para orçar.</p>
+        <ul>
+          <li>Layout e circulação</li>
+          <li>Marcenaria detalhada</li>
+          <li>Iluminação por cena</li>
+        </ul>
+        <a class="card__cta" href="https://wa.me/5555996615052?text=Quero%20falar%20sobre%20projeto%20de%20interiores" target="_blank" rel="noopener">Falar sobre reformar</a>
+      </article>
+
+      <article class="card revelar">
+        <h3>Comercial</h3>
+        <p>Para lojas, clínicas e escritórios. Fachada, layout de atendimento, comunicação visual e um espaço que trabalha a favor da marca.</p>
+        <ul>
+          <li>Fachada e comunicação visual</li>
+          <li>Layout operacional</li>
+          <li>Acompanhamento de obra</li>
+        </ul>
+        <a class="card__cta" href="https://wa.me/5555996615052?text=Quero%20falar%20sobre%20projeto%20comercial" target="_blank" rel="noopener">Falar sobre meu negócio</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTATO ══ -->
+<section class="contato" id="contato">
+  <div class="wrap contato__grid">
+    <div>
+      <p class="cota cota--claro">Contato</p>
+      <h2 class="titulo-grande titulo-grande--claro">Conte o que<br><em>você quer construir</em></h2>
+      <p class="contato__apoio">Responder leva pouco. Descreva o terreno ou o imóvel, o que você imagina e o prazo — a partir daí marcamos uma conversa.</p>
+
+      <dl class="contato__dados">
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5555996615052" target="_blank" rel="noopener">(55) 99661-5052</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:contato@wellersonpessotto.com.br">contato@wellersonpessotto.com.br</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://instagram.com/" target="_blank" rel="noopener">@wellersonpessotto</a></dd></div>
+        <div><dt>Atendimento</dt><dd>Presencial na região e on-line para todo o Brasil</dd></div>
+      </dl>
+    </div>
+
+    <form class="form" id="form-contato" novalidate>
+      <div class="campo">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" required autocomplete="name">
+      </div>
+      <div class="campo">
+        <label for="fone">WhatsApp</label>
+        <input id="fone" name="fone" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000">
+      </div>
+      <div class="campo">
+        <label for="tipo">Tipo de projeto</label>
+        <select id="tipo" name="tipo">
+          <option>Projeto arquitetônico</option>
+          <option>Interiores</option>
+          <option>Comercial</option>
+          <option>Ainda não sei</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="msg">O que você quer construir?</label>
+        <textarea id="msg" name="msg" rows="4" required></textarea>
+      </div>
+      <button class="btn btn--brasa btn--bloco" type="submit">Enviar pelo WhatsApp</button>
+      <p class="form__nota">O envio abre uma conversa no WhatsApp com a mensagem pronta.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="wrap rodape__grid">
+    <img class="rodape__logo" src="assets/logo-claro.png" alt="Wellerson Pessotto — Arquitetura, Interiores e Urbanismo">
+    <nav class="rodape__menu" aria-label="Rodapé">
+      <a href="#estudio">Estúdio</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Processo</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <p class="rodape__legal">© <span id="ano">2026</span> Wellerson Pessotto · CAU 000000-0</p>
+  </div>
+</footer>
+
+<a class="wpp-flutuante" href="https://wa.me/5555996615052" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+</a>
+
+<!-- Lightbox -->
+<div class="lupa" id="lupa" hidden>
+  <button class="lupa__fechar" aria-label="Fechar">&times;</button>
+  <button class="lupa__nav lupa__nav--ant" aria-label="Anterior">&#8249;</button>
+  <button class="lupa__nav lupa__nav--prox" aria-label="Próxima">&#8250;</button>
+  <figure>
+    <img id="lupa-img" src="" alt="">
+    <figcaption id="lupa-legenda"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Imagens originais enviadas pelo cliente (~37 MB).
+# Os arquivos servidos pelo site ficam em assets/, já redimensionados.
+1784*.jpg
+1784*.png
+banner.png
+wellerson.png
+logo.jpg
+
+# Sistema
+.DS_Store
