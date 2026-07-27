@@ -303,6 +303,52 @@ a{ color:inherit; }
   font-size:clamp(1.02rem,.96rem + .3vw,1.16rem);
 }
 
+/* Frase de abertura: o pensamento do escritório em destaque. */
+.manifesto__frase{
+  margin:0 0 2.6rem;
+  max-width:24ch;
+  font-family:var(--disp);
+  font-size:clamp(1.5rem,1rem + 2.1vw,2.7rem);
+  font-weight:500; font-stretch:112%;
+  line-height:1.12; letter-spacing:-.02em;
+  text-wrap:balance;
+}
+.manifesto__frase em{
+  display:block; margin-top:.5em;
+  font-family:var(--corpo); font-style:italic; font-weight:200;
+  font-size:.66em; letter-spacing:0; color:var(--brasa);
+}
+
+.diferenciais{
+  list-style:none; margin:3.4rem 0 0; padding:0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:0;
+  border-top:1px solid rgba(10,17,28,.16);
+}
+.diferencial{
+  padding:1.8rem clamp(1.2rem,2.4vw,2.2rem) 1.8rem 0;
+  border-right:1px solid rgba(10,17,28,.12);
+}
+.diferencial:last-child{ border-right:0; }
+.diferencial h3{
+  margin:0 0 .6rem;
+  font-family:var(--disp); font-size:1.1rem; font-weight:600; font-stretch:108%;
+  letter-spacing:-.01em;
+}
+.diferencial h3::before{
+  content:""; display:block; width:26px; height:2px;
+  background:var(--brasa); margin-bottom:1rem;
+}
+.diferencial p{ margin:0; color:#33404F; font-size:.96rem; }
+
+.manifesto__valores{
+  margin:3.2rem 0 0; padding-top:2rem;
+  border-top:1px solid rgba(10,17,28,.16);
+  max-width:78ch; margin-left:auto;
+  color:#33404F;
+  font-size:clamp(1.02rem,.96rem + .3vw,1.16rem);
+}
+
 /* ═══ PROJETOS ═══════════════════════════════════════ */
 .projetos{ padding:0 0 clamp(4rem,9vh,7rem); }
 
@@ -378,28 +424,53 @@ a{ color:inherit; }
   color:var(--papel);
   padding:clamp(5rem,11vh,8.5rem) 0;
 }
-.etapas{
-  list-style:none; margin:0; padding:0;
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+.processo__intro{
+  max-width:60ch; margin:0 0 3.2rem;
+  color:rgba(243,241,238,.78);
+  font-size:clamp(1.02rem,.96rem + .3vw,1.18rem);
+}
+.fases{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:0;
   border-top:1px solid rgba(215,155,88,.3);
 }
-.etapa{
-  padding:2.2rem clamp(1.2rem,2.4vw,2.2rem) 2.2rem 0;
+.fase{
+  position:relative;
+  padding:2.2rem clamp(1.4rem,2.4vw,2.4rem) 2.4rem 0;
   border-right:1px solid rgba(243,241,238,.12);
 }
-.etapa:last-child{ border-right:0; }
-.etapa__num{
+.fase:last-child{ border-right:0; }
+.fase__grupo{
+  display:inline-block; margin-bottom:1.6rem;
+  padding:.28rem .7rem;
+  border:1px solid rgba(215,155,88,.5);
+  font-family:var(--disp); font-size:.6rem; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--brasa);
+}
+.fase__num{
   display:block;
   font-family:var(--disp); font-size:.72rem; font-weight:500;
-  letter-spacing:.24em; color:var(--brasa);
-  margin-bottom:1.4rem;
+  letter-spacing:.2em; color:rgba(243,241,238,.5);
+  margin-bottom:.5rem;
 }
-.etapa h3{
-  font-family:var(--disp); font-size:1.24rem; font-weight:600; font-stretch:108%;
-  letter-spacing:-.01em; margin:0 0 .7rem;
+.fase h3{
+  font-family:var(--disp); font-size:1.22rem; font-weight:600; font-stretch:108%;
+  letter-spacing:-.01em; margin:0 0 1.2rem;
 }
-.etapa p{ margin:0; font-size:.98rem; color:rgba(243,241,238,.68); }
+.fase ul{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap:.1rem;
+}
+.fase li{
+  padding:.7rem 0;
+  border-top:1px solid rgba(243,241,238,.1);
+  font-size:.95rem; color:rgba(243,241,238,.74);
+  display:flex; gap:.7rem; align-items:baseline;
+}
+.fase li::before{
+  content:""; flex:0 0 12px; height:1px; background:var(--brasa);
+  translate:0 -.3em;
+}
 
 /* ═══ SOBRE ══════════════════════════════════════════ */
 .sobre{ padding:clamp(5rem,11vh,8rem) 0; }
@@ -602,7 +673,8 @@ a{ color:inherit; }
   .grade{ grid-template-columns:repeat(2,1fr); }
   .obra--larga{ grid-column:span 2; }
   .obra--total{ aspect-ratio:16/8; }
-  .etapa{ border-right:0; border-bottom:1px solid rgba(243,241,238,.12); padding-right:0; }
+  .fase{ border-right:0; border-bottom:1px solid rgba(243,241,238,.12); padding-right:0; }
+  .diferencial{ border-right:0; border-bottom:1px solid rgba(10,17,28,.12); padding-right:0; }
 }
 
 @media (max-width:860px){
