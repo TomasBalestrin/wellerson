@@ -292,24 +292,13 @@ a{ color:inherit; }
 }
 
 /* ═══ MANIFESTO ══════════════════════════════════════ */
-.manifesto{ padding:clamp(5.5rem,12vh,9rem) 0; }
-.manifesto__texto{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:1.6rem clamp(2rem,5vw,4rem);
-  max-width:92ch;
-  margin-left:auto;
-  padding-top:.6rem;
-  border-top:1px solid rgba(23,31,46,.14);
-}
-.manifesto__texto p{
-  margin:0; color:#33404F;
-  font-size:clamp(1.02rem,.96rem + .3vw,1.16rem);
-}
+.manifesto{ padding:clamp(5.5rem,12vh,9rem) 0; text-align:center; }
+.manifesto .cota{ justify-content:center; }
 
 /* Frase de abertura: o pensamento do escritório em destaque. */
 .manifesto__frase{
-  margin:0 0 2.6rem;
-  max-width:24ch;
+  margin:0 auto 2.4rem;
+  max-width:26ch;
   font-family:var(--disp);
   font-size:clamp(1.5rem,1rem + 2.1vw,2.7rem);
   font-weight:500; font-stretch:112%;
@@ -322,17 +311,25 @@ a{ color:inherit; }
   font-size:.66em; letter-spacing:0; color:var(--tinta);
 }
 
+.manifesto__texto{
+  max-width:62ch;
+  margin:0 auto;
+  padding-top:1.8rem;
+  border-top:1px solid rgba(23,31,46,.14);
+  display:grid; gap:1.1rem;
+}
+.manifesto__texto p{
+  margin:0; color:#33404F;
+  font-size:clamp(1.02rem,.96rem + .3vw,1.16rem);
+}
+
 .diferenciais{
-  list-style:none; margin:3.4rem 0 0; padding:0;
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:0;
-  border-top:1px solid rgba(23,31,46,.16);
+  list-style:none; margin:3.4rem auto 0; padding:0;
+  max-width:920px;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:2rem clamp(1.5rem,3vw,3rem);
 }
-.diferencial{
-  padding:1.8rem clamp(1.2rem,2.4vw,2.2rem) 1.8rem 0;
-  border-right:1px solid rgba(23,31,46,.12);
-}
-.diferencial:last-child{ border-right:0; }
+.diferencial{ padding-top:2.2rem; border-top:1px solid rgba(23,31,46,.16); }
 .diferencial h3{
   margin:0 0 .6rem;
   font-family:var(--disp); font-size:1.1rem; font-weight:600; font-stretch:108%;
@@ -340,14 +337,14 @@ a{ color:inherit; }
 }
 .diferencial h3::before{
   content:""; display:block; width:26px; height:2px;
-  background:var(--tinta); margin-bottom:1rem;
+  background:var(--tinta); margin:0 auto 1rem;
 }
-.diferencial p{ margin:0; color:#33404F; font-size:.96rem; }
+.diferencial p{ margin:0 auto; max-width:34ch; color:#33404F; font-size:.96rem; }
 
 .manifesto__valores{
-  margin:3.2rem 0 0; padding-top:2rem;
+  margin:3.4rem auto 0; padding-top:2rem;
   border-top:1px solid rgba(23,31,46,.16);
-  max-width:78ch; margin-left:auto;
+  max-width:68ch;
   color:#33404F;
   font-size:clamp(1.02rem,.96rem + .3vw,1.16rem);
 }
@@ -700,7 +697,6 @@ a{ color:inherit; }
   .obra--larga{ grid-column:span 2; }
   .obra--total{ aspect-ratio:16/8; }
   .fase{ border-right:0; border-bottom:1px solid rgba(241,243,246,.12); padding-right:0; }
-  .diferencial{ border-right:0; border-bottom:1px solid rgba(23,31,46,.12); padding-right:0; }
 }
 
 @media (max-width:940px){
