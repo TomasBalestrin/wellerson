@@ -66,7 +66,7 @@
     const img = obra.querySelector('img');
     lupaImg.src = img.src;
     lupaImg.alt = img.alt;
-    lupaLegenda.textContent = `${obra.querySelector('.obra__cat').textContent} — ${obra.querySelector('.obra__nome').textContent}`;
+    lupaLegenda.textContent = `${obra.querySelector('.obra__cat').textContent} · ${obra.querySelector('.obra__nome').textContent}`;
   };
 
   const abrirLupa = (i) => {
