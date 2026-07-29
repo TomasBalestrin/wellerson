@@ -50,27 +50,46 @@
     });
   });
 
-  /* ── Lightbox ── */
+  /* ── Carrossel de projeto (popup) ── */
   const lupa = document.getElementById('lupa');
   const lupaImg = document.getElementById('lupa-img');
   const lupaLegenda = document.getElementById('lupa-legenda');
+  const lupaContador = document.getElementById('lupa-contador');
+  let fotos = [];
   let indice = 0;
+  let nomeAtual = '';
 
-  const visiveis = () => obras.filter((o) => !o.classList.contains('oculta'));
-
-  const mostrar = (i) => {
-    const lista = visiveis();
-    if (!lista.length) return;
-    indice = (i + lista.length) % lista.length;
-    const obra = lista[indice];
-    const img = obra.querySelector('img');
-    lupaImg.src = img.src;
-    lupaImg.alt = img.alt;
-    lupaLegenda.textContent = `${obra.querySelector('.obra__cat').textContent} · ${obra.querySelector('.obra__nome').textContent}`;
+  const precarregar = (i) => {
+    if (fotos[i]) { const im = new Image(); im.src = fotos[i]; }
   };
 
-  const abrirLupa = (i) => {
-    mostrar(i);
+  const render = () => {
+    if (!fotos.length) return;
+    lupaImg.src = fotos[indice];
+    lupaImg.alt = `${nomeAtual}, foto ${indice + 1} de ${fotos.length}`;
+    lupaContador.textContent = `${indice + 1} / ${fotos.length}`;
+    precarregar(indice + 1);
+    precarregar(indice - 1);
+  };
+
+  const ir = (delta) => {
+    if (fotos.length < 2) return;
+    indice = (indice + delta + fotos.length) % fotos.length;
+    render();
+  };
+
+  const abrirLupa = (obra) => {
+    try { fotos = JSON.parse(obra.dataset.fotos || '[]'); }
+    catch (e) { fotos = []; }
+    if (!fotos.length) {
+      const img = obra.querySelector('img');
+      if (img) fotos = [img.src];
+    }
+    nomeAtual = obra.dataset.nome || obra.querySelector('.obra__nome')?.textContent || '';
+    indice = 0;
+    lupaLegenda.textContent = `${obra.querySelector('.obra__cat').textContent} · ${nomeAtual}`;
+    lupa.classList.toggle('lupa--unica', fotos.length < 2);
+    render();
     lupa.hidden = false;
     document.body.style.overflow = 'hidden';
     lupa.querySelector('.lupa__fechar').focus();
@@ -85,25 +104,37 @@
   obras.forEach((obra) => {
     obra.setAttribute('tabindex', '0');
     obra.setAttribute('role', 'button');
-    obra.addEventListener('click', () => abrirLupa(visiveis().indexOf(obra)));
+    const nome = obra.dataset.nome || '';
+    obra.setAttribute('aria-label', `Abrir galeria do projeto ${nome}`);
+    obra.addEventListener('click', () => abrirLupa(obra));
     obra.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        abrirLupa(visiveis().indexOf(obra));
+        abrirLupa(obra);
       }
     });
   });
 
   lupa.querySelector('.lupa__fechar').addEventListener('click', fecharLupa);
-  lupa.querySelector('.lupa__nav--ant').addEventListener('click', () => mostrar(indice - 1));
-  lupa.querySelector('.lupa__nav--prox').addEventListener('click', () => mostrar(indice + 1));
+  lupa.querySelector('.lupa__nav--ant').addEventListener('click', () => ir(-1));
+  lupa.querySelector('.lupa__nav--prox').addEventListener('click', () => ir(1));
   lupa.addEventListener('click', (e) => { if (e.target === lupa) fecharLupa(); });
+
+  // Arrastar/deslizar (touch) para trocar de foto
+  let x0 = null;
+  lupa.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  lupa.addEventListener('touchend', (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 45) ir(dx < 0 ? 1 : -1);
+    x0 = null;
+  });
 
   document.addEventListener('keydown', (e) => {
     if (lupa.hidden) return;
     if (e.key === 'Escape') fecharLupa();
-    if (e.key === 'ArrowLeft') mostrar(indice - 1);
-    if (e.key === 'ArrowRight') mostrar(indice + 1);
+    if (e.key === 'ArrowLeft') ir(-1);
+    if (e.key === 'ArrowRight') ir(1);
   });
 
   /* ── Revelar no scroll ── */

@@ -1,10 +1,13 @@
-# Imagens originais enviadas pelo cliente (~37 MB).
+# Imagens originais enviadas pelo cliente.
 # Os arquivos servidos pelo site ficam em assets/, já redimensionados.
 1784*.jpg
 1784*.png
 banner.png
 wellerson.png
 logo.jpg
+
+# Pasta fonte dos projetos (bruta); o site usa assets/projetos/
+Imagens/
 
 # Sistema
 .DS_Store

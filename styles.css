@@ -416,6 +416,22 @@ a{ color:inherit; }
 }
 .obra:hover .obra__nota,.obra:focus-within .obra__nota{ max-height:3.6rem; opacity:1; }
 
+/* Selo que sinaliza a galeria dentro do projeto */
+.obra__contador{
+  position:absolute; top:1rem; right:1rem; z-index:3;
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.35rem .7rem;
+  background:rgba(10,17,28,.55);
+  backdrop-filter:blur(4px);
+  font-family:var(--disp); font-size:.62rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--papel);
+}
+.obra__contador::before{
+  content:""; width:11px; height:11px;
+  border:1.5px solid var(--brasa-cl);
+  box-shadow:3px 3px 0 -1.5px var(--brasa-cl);
+}
+
 .obra.oculta{ display:none; }
 
 /* ═══ PROCESSO ═══════════════════════════════════════ */
@@ -658,6 +674,13 @@ a{ color:inherit; }
 .lupa__nav--ant{ left:.2rem; }
 .lupa__nav--prox{ right:.2rem; }
 .lupa__fechar:hover,.lupa__nav:hover{ color:var(--brasa); }
+.lupa__contador{
+  position:absolute; top:1.3rem; left:1.4rem;
+  font-family:var(--disp); font-size:.74rem; font-weight:600;
+  letter-spacing:.16em; color:rgba(243,241,238,.72);
+}
+.lupa--unica .lupa__nav,
+.lupa--unica .lupa__contador{ display:none; }
 
 /* ═══ REVELAR NO SCROLL ══════════════════════════════ */
 /* Só esconde quando o JS confirma que vai revelar. Sem JS,
