@@ -198,7 +198,7 @@ a{ color:inherit; }
   padding:0; place-items:center;
 }
 .hamburguer span{
-  display:block; width:26px; height:1.5px; background:var(--papel);
+  display:block; width:20px; height:1.5px; background:var(--papel);
   transition:transform .3s var(--ease), opacity .3s var(--ease);
 }
 .hamburguer span+span{ margin-top:7px; }
@@ -702,7 +702,7 @@ a{ color:inherit; }
 @media (max-width:940px){
   .menu,.wpp{ display:none; }
   .hamburguer{ display:grid; }
-  .marca__icone{ height:30px; }
+  .marca__icone{ height:26px; }
   .marca__nome{ font-size:.82rem; }
   .rodape__logo{ width:210px; }
   .sobre__grid{ grid-template-columns:1fr; }
@@ -716,7 +716,7 @@ a{ color:inherit; }
   .obra__nota{ max-height:3.6rem; opacity:1; }
   /* No celular a marca é só o símbolo: o nome completo já abre o hero. */
   .marca__nome{ display:none; }
-  .marca__icone{ height:32px; }
+  .marca__icone{ height:26px; }
   .hero{ padding-bottom:6.5rem; }
   .hero__rodape span:first-child{ display:none; }
   .hero__acoes .btn{ flex:1 1 100%; }
