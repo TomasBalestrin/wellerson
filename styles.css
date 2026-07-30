@@ -247,14 +247,14 @@ a{ color:inherit; }
 .hero__conteudo{ max-width:56ch; }
 .hero__nome{
   font-family:var(--disp);
-  font-size:clamp(2.3rem,.55rem + 7.4vw,6.6rem);
+  font-size:clamp(2rem,1rem + 4.6vw,4.6rem);
   font-weight:600;
   font-stretch:118%;
-  line-height:.92;
-  letter-spacing:-.035em;
+  line-height:.95;
+  letter-spacing:-.03em;
   text-transform:uppercase;
   color:var(--papel);
-  margin:0 0 1.6rem;
+  margin:0 0 1.4rem;
 }
 .hero__nome em{
   display:inline-block;
@@ -263,10 +263,10 @@ a{ color:inherit; }
   color:var(--brasa-cl);
 }
 .hero__linha{
-  max-width:46ch;
-  margin:0 0 2.4rem;
+  max-width:52ch;
+  margin:0 0 2.2rem;
   color:rgba(241,243,246,.86);
-  font-size:clamp(1.02rem,.95rem + .4vw,1.24rem);
+  font-size:clamp(.96rem,.9rem + .25vw,1.08rem);
 }
 .hero__acoes{ display:flex; flex-wrap:wrap; gap:.9rem; }
 
