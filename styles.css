@@ -622,6 +622,20 @@ a{ color:inherit; }
   color:rgba(241,243,246,.72); text-decoration:none;
 }
 .rodape__menu a:hover{ color:var(--brasa); }
+.rodape__endereco{
+  width:100%;
+  font-style:normal;
+  font-family:var(--disp); font-size:.74rem; font-weight:400;
+  letter-spacing:.05em; line-height:1.7;
+  color:rgba(241,243,246,.7);
+}
+.rodape__endereco a{
+  display:inline-flex; gap:.6rem; align-items:flex-start;
+  color:inherit; text-decoration:none;
+  transition:color .25s var(--ease);
+}
+.rodape__endereco a:hover{ color:var(--brasa); }
+.rodape__endereco svg{ width:15px; height:15px; flex:none; margin-top:.15rem; fill:var(--brasa); }
 .rodape__legal{
   margin:0; width:100%;
   padding-top:1.6rem; border-top:1px solid rgba(241,243,246,.14);
