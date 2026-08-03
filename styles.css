@@ -648,14 +648,13 @@ a{ color:inherit; }
   position:fixed; right:1.1rem; bottom:1.1rem; z-index:90;
   display:grid; place-items:center;
   width:54px; height:54px;
-  background:var(--tinta); color:var(--papel);
+  background:#25D366; color:#fff;
   border-radius:50%;
   box-shadow:0 8px 24px rgba(23,31,46,.32);
-  opacity:0; visibility:hidden; transform:translateY(12px);
-  transition:opacity .35s var(--ease), transform .35s var(--ease), visibility .35s;
+  transition:background .25s var(--ease), transform .25s var(--ease);
 }
-.wpp-flutuante.visivel{ opacity:1; visibility:visible; transform:none; }
-.wpp-flutuante svg{ width:26px; height:26px; fill:currentColor; }
+.wpp-flutuante:hover{ background:#1EBE5B; transform:translateY(-2px); }
+.wpp-flutuante svg{ width:28px; height:28px; fill:currentColor; }
 
 /* ═══ LIGHTBOX ═══════════════════════════════════════ */
 .lupa{

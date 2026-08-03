@@ -6,12 +6,9 @@
 
   /* ── Topo: fundo sólido depois do hero ── */
   const topo = document.querySelector('.topo');
-  const flutuante = document.querySelector('.wpp-flutuante');
 
   const aoRolar = () => {
-    const passou = window.scrollY > window.innerHeight * 0.72;
     topo.classList.toggle('encolhido', window.scrollY > 40);
-    flutuante.classList.toggle('visivel', passou);
   };
   window.addEventListener('scroll', aoRolar, { passive: true });
   aoRolar();
